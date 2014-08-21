@@ -18,7 +18,7 @@ struct Vector3 {
     Vector3<T> normalise() const;
     Vector3<T> operator+(const Vector3<T>& other) const;
     Vector3<T> operator-(const Vector3<T>& other) const;
-    Vector3<T>& operator=(const Vector3<T>& other) const;
+    Vector3<T>& operator=(const Vector3<T>& other);
     bool operator==(const Vector3<T>& other) const;
 
     friend std::ostream& operator<<(std::ostream& out, Vector3<T>& vec) {

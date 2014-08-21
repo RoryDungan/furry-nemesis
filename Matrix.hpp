@@ -13,14 +13,19 @@ public:
     int rows() const;
     int columns() const;
 
-    T get(int row, int col);
-    Matrix<T> transpose();
+    T& get(int row, int col);
+    Matrix<T> transpose() const;
+    Matrix<T> inverse() const;
     Matrix<T> operator+(const Matrix<T>& other) const;
     Matrix<T> operator-(const Matrix<T>& other) const;
     Matrix<T> operator*(const Matrix<T>& other) const;
+    Matrix<T>& operator=(const Matrix<T>& other);
+    bool operator==(const Vector3<T>& other) const;
+
+    friend std::ostream& operator<<(std::ostream& out, Matrix<T>& mat);
 
 private:
-    std::vector<std::vector<T>> data;
+    std::vector<std::vector<T> > data;
 };
 
 #endif // MATRIX_HPP

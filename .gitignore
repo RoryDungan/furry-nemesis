@@ -1,0 +1,14 @@
+# Ignore object files and compiled code
+*.o
+*.obj
+*.a
+
+# OS generated
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
