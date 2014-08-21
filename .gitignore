@@ -3,6 +3,9 @@
 *.obj
 *.a
 
+# General
+*.swp
+
 # OS generated
 .DS_Store
 .DS_Store?

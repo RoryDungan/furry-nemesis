@@ -7,7 +7,6 @@
 template <typename T>
 struct Vector3 {
     Vector3();
-    Vector3(Vector3<T>& other);
     Vector3(T x, T y, T z);
 
     T dot(const Vector3<T>& other) const;
@@ -34,12 +33,6 @@ Vector3<T>::Vector3() {
     x = 0;
     y = 0;
     z = 0;
-}
-
-// Copy constructor
-template <typename T>
-Vector3<T>::Vector3(Vector3<T>& other) {
-   *this == other;
 }
 
 // Constructor with member initialisation
@@ -122,7 +115,7 @@ Vector3<T>& Vector3<T>::operator=(const Vector3<T>& other) {
 
 // Equality
 template <typename T>
-bool Vector3<T>::operator==(const Vector3<T>& other) {
+bool Vector3<T>::operator==(const Vector3<T>& other) const {
     return x == other.x && y == other.y && z == other.z;
 }
 
