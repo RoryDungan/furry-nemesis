@@ -40,7 +40,7 @@ Vector2<T>::Vector2(T x, T y) {
     this->y = y;
 }
 
-// Calculate the dot product of two vectors
+// Calculate the scalar product of two vectors
 template <typename T>
 T Vector2<T>::dot(const Vector2<T>& other) const {
     return x * other.x + y * other.y;

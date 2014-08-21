@@ -43,13 +43,13 @@ Vector3<T>::Vector3(T x, T y, T z) {
     this->z = z;
 }
 
-// Calculate the dot product of two vectors
+// Calculate the scalar product of two vectors
 template <typename T>
 T Vector3<T>::dot(const Vector3<T>& other) const {
     return x * other.x + y * other.y + z * other.z;
 }
 
-// Calculate the cross product of two vectors
+// Calculate the vector product of two vectors
 template <typename T>
 Vector3<T> Vector3<T>::cross(const  Vector3<T>& other) const {
     // 
